@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST
+META.yml
+Makefile.PL
+README
+config.yml
+dist.ini
+lib/DancerX/Config.pm
+logs/development.log
+t/00_use.t
+t/foobar/02_find_conf.t
