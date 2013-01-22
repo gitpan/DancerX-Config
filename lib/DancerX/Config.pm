@@ -1,6 +1,6 @@
 package DancerX::Config;
 {
-  $DancerX::Config::VERSION = '0.01';
+  $DancerX::Config::VERSION = '0.02';
 }
 use strict;
 use warnings;
