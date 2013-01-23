@@ -23,12 +23,11 @@ my %WriteMakefileArgs = (
     "B" => 0,
     "Cwd" => 0,
     "Dancer" => "1.3110",
-    "Dancer::Template::TemplateToolkit" => 0,
     "Data::Dumper" => 0,
     "FindBin" => 0,
-    "Template" => 0
+    "Template::Simple" => "0.06"
   },
-  "VERSION" => "0.02",
+  "VERSION" => "0.03",
   "test" => {
     "TESTS" => "t/*.t t/foobar/*.t"
   }

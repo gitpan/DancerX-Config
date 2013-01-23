@@ -8,4 +8,5 @@ dist.ini
 lib/DancerX/Config.pm
 logs/development.log
 t/00_use.t
+t/01_placeholder.t
 t/foobar/02_find_conf.t

@@ -16,8 +16,7 @@ requires:
   B: 0
   Cwd: 0
   Dancer: 1.3110
-  Dancer::Template::TemplateToolkit: 0
   Data::Dumper: 0
   FindBin: 0
-  Template: 0
-version: 0.02
+  Template::Simple: 0.06
+version: 0.03

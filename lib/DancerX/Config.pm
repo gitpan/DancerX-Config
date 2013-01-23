@@ -1,6 +1,6 @@
 package DancerX::Config;
 {
-  $DancerX::Config::VERSION = '0.02';
+  $DancerX::Config::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -26,16 +26,21 @@ sub import {
 sub placeholder {
     my $self = shift;
     my $config = $self->{config};
-    my $change_before = Data::Dumper->new([$config])->Indent(0)->Dump;
-    my $change_after = $change_before;
-    $change_after =~s{\~\*([a-zA-Z0-9\.\_]+)\*\~}{
-        my $token = $1;
-        my $path = join "", map {sprintf "{%s}", perlstring($_)} split /\./, $token;
-        eval qq{return \$self->{dancer_cfg}$path || ""};
-    }ge;
-    if ($change_before ne $change_after) {
-        my $new_config = eval "my $change_after";
-        %$config = (%$new_config);
+    while (1) {
+        my $before = Data::Dumper->new([$config])->Indent(0)->Dump;
+        my $after = $before;
+        $after =~s{\~\*([a-zA-Z0-9\.\_]+)\*\~}{
+            my $token = $1;
+            my $path = join "", map {sprintf "{%s}", perlstring($_)} split /\./, $token;
+            eval qq{return \$config->$path || ""};
+        }ge;
+        if ($before ne $after) {
+            my $new_config = eval "my $after";
+            %$config = (%$new_config);
+        }
+        else {
+            last;
+        }
     }
     return;
 }

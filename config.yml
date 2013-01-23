@@ -17,13 +17,16 @@ charset: "UTF-8"
 # template engine
 # simple: default and very basic template engine
 # template_toolkit: TT
-
-template: "template_toolkit"
-engines:
-  template_toolkit:
-    encoding:  'utf8'
-    start_tag: '[%'
-    end_tag:   '%]'
+template: "simple"
 
 test1: "~*template*~"
 test2: "~*engines.template_toolkit.encoding*~!!OK"
+data:
+    dir: "~*appdir*~/data"
+    currency_csv_file: "~*data.dir*~/currencies.csv"
+    industry_csv_file: "~*data.dir*~/industries.csv"
+    standand_fields: "~*data.dir*~/standard_fields.csv"
+    hybrid_cache:
+        dir: "~*data.dir*~/hybrid_cache"
+        all_locations: "~*data.hybrid_cache.dir*~/all_locations"
+
