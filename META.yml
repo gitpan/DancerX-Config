@@ -19,4 +19,4 @@ requires:
   Data::Dumper: 0
   FindBin: 0
   Template::Simple: 0.06
-version: 0.03
+version: 0.04

@@ -1,6 +1,6 @@
 package DancerX::Config;
 {
-  $DancerX::Config::VERSION = '0.03';
+  $DancerX::Config::VERSION = '0.04';
 }
 use strict;
 use warnings;
@@ -77,7 +77,7 @@ DancerX::Config - Dancer config smart finder + parser
 
     my $config = Dancer::config;
 
--head3 Case 2
+=head3 Case 2
 
 Set a dynamic variable before the SQLite file path in the config.
 
