@@ -20,14 +20,13 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "DancerX::Config",
   "PREREQ_PM" => {
-    "B" => 0,
-    "Cwd" => 0,
+    "Cwd" => "3.40",
     "Dancer" => "1.3110",
-    "Data::Dumper" => 0,
-    "FindBin" => 0,
+    "Data::Dumper" => "2.131",
+    "FindBin" => "1.49",
     "Template::Simple" => "0.06"
   },
-  "VERSION" => "0.04",
+  "VERSION" => "0.05",
   "test" => {
     "TESTS" => "t/*.t t/foobar/*.t"
   }
